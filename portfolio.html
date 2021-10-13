@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/600dcddf2d.js" crossorigin="anonymous"></script>
+        <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap');
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #F1FAEE;
+            }
+            html {
+                background-color: #F1FAEE;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            #navbar {
+                padding: 2% 0;
+                background-color: #E63946;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            #navbar > ul {
+                display: flex;
+                gap: 70px;
+                justify-content: space-between;
+                padding: 0rem 2rem;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+            nav > ul > li > a:hover {
+                color: #1D3557;
+            }
+            #welcome-section {
+                background: linear-gradient(#A8DADC 40%, #F1FAEE);
+                color: #1D3557;
+                font-family: 'Playfair Display', serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            #welcome-section > h1 {
+                color: #E63946;
+                font-size: 7vh;
+            }
+            #welcome-section > h2 {
+                color: #457B9D;
+                font-size: 5vh;
+                padding-bottom: 1.5rem;
+            }
+            #welcome-section > h3 {
+                font-size: 3.5vh;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            .projects-header {
+                color: #1D3557;
+                font-family: 'Playfair Display', serif;
+                padding-top: 2rem;
+                text-align: center;
+                font-size: 5vh;
+            }
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                grid-gap: 3rem;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 5rem;
+                padding: 2rem;
+            }
+            .project-tile {
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.19);
+                border: 2px solid #1D3557;
+                border-radius: 25px;
+                overflow: hidden;
+            }
+            .project-tile :hover {
+                background-color: #457B9D;
+                color: #A8DADC;
+                transition: background-color 0.3s ease,
+                            color 0.3s ease;
+            }
+            .project-image {
+                height: calc(100% / 320px);
+                width: 100%;
+                object-fit: cover;
+            }
+            .project-title {
+                display: block;
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.3rem;
+                padding: 1rem 0.5rem;
+                background-color: #A8DADC;
+                color: #1D3557;
+            }
+            #contact {
+                background: linear-gradient(#F1FAEE, #A8DADC 40%);
+                color: #E63946;
+                font-family: 'Playfair Display', serif;
+                height: 65vh;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+            .contact-header {
+                font-size: 2rem;
+                padding: 2rem 0;
+            }
+            .contact-links > a {
+                font-family: 'Source Sans Pro', sans-serif;
+                padding: 0 2rem;
+                font-size: 1.5rem;
+                color: #457B9D;
+            }
+            .contact-links > a:hover {
+                color: #1D3557;
+            }
+            footer {
+                background-color: #1D3557;
+                width: 100%;
+                color: #F1FAEE;
+                height: 5vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+            }
+            footer > p > a:hover {
+                color: #E63946;
+            }
+            @media (max-width: 800px) {
+                #navbar {
+                padding: 4% 0;
+                font-weight: 300;
+                }
+                .projects-grid {
+                    display: grid;
+                    grid-gap: 1.5rem;
+                    width: 80%;
+                    padding: 1rem;
+                }
+            }
+            @media (max-width: 600px) {
+                #welcome-section > h1 {
+                color: #E63946;
+                font-size: 6vh;
+            }
+            #welcome-section > h2 {
+                color: #457B9D;
+                font-size: 5vh;
+                padding-bottom: 1.5rem;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <nav id="navbar">
+            <ul>
+                <li><a id="nav-link"
+                    href="#welcome-section">About</a></li>
+                <li><a id="nav-link"
+                    href="#projects">Work</a></li>
+                <li><a id="nav-link"
+                    href="#Work">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="welcome-section">
+            <h1>Hi there, I'm Eunice.</h1>
+            <h2>Future Web Developer</h2>
+            <h3>Welcome to my portfolio.</h3>
+        </section>
+        <section id="projects">
+            <h2 class="projects-header">See my projects.</h2>
+        <div class="projects-grid">
+            <a href="https://fcc-tributepage-agatha.glitch.me/"
+            target="_blank"
+            class="project-tile">
+        <img class="project-image"
+        src="https://i.ibb.co/fCypWTV/tribute.png"
+        alt="Tribute Page">
+        <p><span class="project-title">Tribute Page</span></p>
+        </a>
+        <a href="https://fcc-surveyform-c19.glitch.me/"
+            target="_blank"
+            class="project-tile">
+        <img class="project-image"
+        src="https://i.ibb.co/YLhZDhH/surveyform.png" alt="Survey Form">
+        <p><span class="project-title">COVID-19 Survey Form</span></p>
+        </a>
+        <a href="https://fcc-tunes-landing-page.glitch.me/"
+        target="_blank"
+        class="project-tile">
+        <img class="project-image"
+        src="https://i.ibb.co/ZMRtMkX/landingpage.png" alt="Landing Page">
+        <p><span class="project-title">Tunes Landing Page</span></p>
+        </a>
+        <a href="https://fcc-tech-doc-lorem.glitch.me/"
+        target="_blank"
+        class="project-tile">
+        <img class="project-image"
+        src="https://i.ibb.co/9h289CF/technicaldocumentation.png" alt="Technical Documentation">
+        <p><span class="project-title">Technical Documentation</span></p>
+        </a>
+        <a href="https://fcc-portfolio-mine.glitch.me/"
+        target="_blank"
+        class="project-tile">
+        <img class="project-image"
+        src="https://i.ibb.co/dQv53LF/portfolio.png" alt="Personal Portfolio">
+        <p><span class="project-title">...and this portfolio!</span></p>
+        </a>
+        </div>
+        </section>
+        <section id="contact">
+            <div class="contact-header">
+                <h1>Drop me a line,<p>
+                    I'd love to hear from you!</h1>
+            </div>
+            <div class="contact-links">
+                <a id="profile-link" target="_blank" class="contact-button"
+                href="https://github.com/xxceanne"><i class="fab fa-github">
+                </i> GitHub</a>
+                <a target="_blank" class="contact-button"
+                href="https://www.freecodecamp.org/xxceanne"><i class="fab fa-free-code-camp">
+                </i> FreeCodeCamp</a>
+                <a target="_blank" class="contact-button"
+                href="mailto:eunice.kua07@gmail.com"><i class="fas fa-envelope">
+                </i> Email</a>
+            </div>
+        </section>
+        <footer>
+            <p>Portfolio project for <a target="_blank" 
+                href="https://www.freecodecamp.org/"><i class="fab fa-free-code-camp">
+                </i> FreeCodeCamp</a>.</p>
+            <p>Created by Eunice K.</p>
+        </footer>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
